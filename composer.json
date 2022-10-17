@@ -1,8 +1,10 @@
 {
     "type": "project",
+    "description": "Init CMS sandbox project",
     "license": "proprietary",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "name": "networking/sandbox-5",
     "require": {
         "php": ">=7.4",
         "ext-ctype": "*",
