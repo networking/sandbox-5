@@ -94,7 +94,7 @@
             "repo": "github.com/networking/recipes",
             "branch": "main",
             "version": "5.4",
-            "ref": "2afb5e9bad77aa5cc5a633d919956b4a3ef0a185"
+            "ref": "6ba6c0a5a1911f1027ec971a1445f4882b468f6e%"
         },
         "files": [
             "config/packages/dev/networking_init_cms.yaml",

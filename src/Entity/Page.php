@@ -18,6 +18,8 @@ use Networking\InitCmsBundle\Model\ContentRoute;
  *     })}
  * )
  * @ORM\HasLifecycleCallbacks()
+ * @Gedmo\Tree(type="materializedPath")
+ * @Gedmo\Loggable()
  */
 class Page extends BasePage{
 
