@@ -1,0 +1,41 @@
+{#
+
+This file is part of the Networking package.
+
+(c) net working AG <info@networking.ch>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+{% block menu %}
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <h3>Demo Sailing Club</h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    {{ knp_menu_render(knp_menu_get('mainMenu'),{'template':'menu/menu.html.twig', 'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true', 'leaf_class': 'nav-item'} ) }}
+
+                </div>
+                <div class="d-flex">
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ 'language'|trans }}
+                        </a>
+                        {{ knp_menu_render(knp_menu_get('langMenu'), {'template':'menu/menu.html.twig','currentClass': 'active', 'ancestorClass': '', 'allow_safe_labels': 'true', 'leaf_class': 'dropdown-item', 'link_attributes': {'class': 'dropdown-item'}}) }}
+                </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+{% endblock menu %}
+
+
+
+
+

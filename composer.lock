@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fc307304731ec064105dd8c2df5c207",
+    "content-hash": "3366b0caa50c24fa08d1e3dcea622338",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -3123,16 +3123,16 @@
         },
         {
             "name": "networking/init-cms-bundle",
-            "version": "v5.4.9.2",
+            "version": "v5.4.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/networking/init-cms-bundle.git",
-                "reference": "d42160416d45f7e7d2c847659af0a8d95df56877"
+                "reference": "4ac57ad41707584831d819176f287ecf17e70f4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/networking/init-cms-bundle/zipball/d42160416d45f7e7d2c847659af0a8d95df56877",
-                "reference": "d42160416d45f7e7d2c847659af0a8d95df56877",
+                "url": "https://api.github.com/repos/networking/init-cms-bundle/zipball/4ac57ad41707584831d819176f287ecf17e70f4b",
+                "reference": "4ac57ad41707584831d819176f287ecf17e70f4b",
                 "shasum": ""
             },
             "require": {
@@ -3214,9 +3214,9 @@
             ],
             "support": {
                 "issues": "https://github.com/networking/init-cms-bundle/issues",
-                "source": "https://github.com/networking/init-cms-bundle/tree/v5.4.9.2"
+                "source": "https://github.com/networking/init-cms-bundle/tree/v5.4.9.4"
             },
-            "time": "2022-10-13T16:07:39+00:00"
+            "time": "2022-10-17T14:14:21+00:00"
         },
         {
             "name": "nyholm/psr7",
@@ -14298,7 +14298,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,

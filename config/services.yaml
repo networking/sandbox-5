@@ -22,3 +22,29 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    Networking\InitCmsBundle\Menu\FrontendMenuBuilder:
+        autowire: true
+        arguments:
+            $allowLocaleCookie: '%networking_init_cms.allow_locale_cookie%'
+
+    # Create the left main menu and right main menu for the frontend
+    app.menu.main:
+        class: Knp\Menu\MenuItem
+        factory: ['@Networking\InitCmsBundle\Menu\FrontendMenuBuilder', 'buildMenu']
+        arguments: [menu_name: 'Main menu', 'navbar-nav me-auto mb-2 mb-lg-0' ]
+        tags:
+            - { name: knp_menu.menu, alias: mainMenu }
+
+    app.menu.lang:
+        class: Knp\Menu\MenuItem
+        factory: ['@Networking\InitCmsBundle\Menu\FrontendMenuBuilder', 'createLangMenu']
+        arguments: [ '@request_stack', '%networking_init_cms.page.languages%', 'dropdown-menu' ]
+        tags:
+            - { name: knp_menu.menu, alias: langMenu }
+
+    app.menu.frontend_footer_menu:
+        class: Knp\Menu\MenuItem
+        factory: ['@Networking\InitCmsBundle\Menu\FrontendMenuBuilder', 'buildMenu']
+        arguments: [ 'Footer-Navigation', '']
+        tags:
+            - { name: knp_menu.menu, alias: footerMenu }

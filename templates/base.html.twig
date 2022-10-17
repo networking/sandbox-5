@@ -1,10 +1,24 @@
+{#
+
+This file is part of the Networking package.
+
+(c) net working AG <info@networking.ch>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
 <!DOCTYPE html>
-<html>
+
+{% block html_tag %}
+<html lang="{{ app.request.locale|slice(0,2) }}">
+{% endblock html_tag %}
+
+{% block head %}
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -12,8 +26,54 @@
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+
+        <title>{% block title %}{% endblock title %}</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
+        {% block head_bottom %}
+        {% endblock head_bottom %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+{% endblock head %}
+
+{% block body_tag %}
+<body >
+{% endblock body_tag %}
+
+{# From here the body starts #}
+{% block body_start %}
+{% endblock body_start %}
+
+{% block body %}
+
+{% block container %}
+    <div class="container {% block container_class %}container-fluid{% endblock container_class %}">
+        {% block search %}
+        {% endblock %}
+        {% block navbar %}{% include 'menu/navbar.html.twig' %}{% endblock navbar %}
+
+        {% block header %}
+        {% endblock header %}
+
+        <div class="content">
+            {% block page_header %}
+            {% endblock page_header %}
+
+            {% block content_row %}
+                {% block content %}
+                    {% block content_sidebar %}
+                    {% endblock content_sidebar %}
+                {% endblock content %}
+            {% endblock content_row %}
+        </div>
+        <footer>
+            {% block footer %}
+                <hr />
+                <div class="footer">
+                    {{ knp_menu_render(knp_menu_get('footerMenu')) }}
+                </div>
+            {% endblock footer %}
+        </footer>
+    </div> <!-- /container -->
+{% endblock container %}
+{% endblock body %}
+</body>
 </html>
