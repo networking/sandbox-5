@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4195b8a9a0327d8eabd96bee0546c12d",
+    "content-hash": "9fc307304731ec064105dd8c2df5c207",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -3123,16 +3123,16 @@
         },
         {
             "name": "networking/init-cms-bundle",
-            "version": "v5.4.6",
+            "version": "v5.4.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/networking/init-cms-bundle.git",
-                "reference": "84541dc14c8cdec1306ff312b19a6939effdbc39"
+                "reference": "d42160416d45f7e7d2c847659af0a8d95df56877"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/networking/init-cms-bundle/zipball/84541dc14c8cdec1306ff312b19a6939effdbc39",
-                "reference": "84541dc14c8cdec1306ff312b19a6939effdbc39",
+                "url": "https://api.github.com/repos/networking/init-cms-bundle/zipball/d42160416d45f7e7d2c847659af0a8d95df56877",
+                "reference": "d42160416d45f7e7d2c847659af0a8d95df56877",
                 "shasum": ""
             },
             "require": {
@@ -3149,7 +3149,7 @@
                 "oneup/flysystem-bundle": "^4.0",
                 "oneup/uploader-bundle": "^4.0",
                 "php": ">=7.4 || ^8.0",
-                "sensio/framework-extra-bundle": "^5.1 || ^6.1",
+                "sensio/framework-extra-bundle": "^5.1 || ^6.0",
                 "sonata-project/admin-bundle": "^4.17.0",
                 "sonata-project/doctrine-orm-admin-bundle": "^4.7",
                 "sonata-project/google-authenticator": "^2.0",
@@ -3179,14 +3179,16 @@
                 "twbs/bootstrap-sass": "^3.4",
                 "twig/twig": "^2.12.1 || ^3.0"
             },
-            "require-dev": {
-                "dg/bypass-finals": "^1.1",
-                "symfony/phpunit-bridge": "^5.0"
-            },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
                     "dev-master": "5.x-dev"
+                },
+                "symfony": {
+                    "endpoint": [
+                        "https://api.github.com/repos/networking/recipes/contents/index.json",
+                        "flex://defaults"
+                    ]
                 }
             },
             "autoload": {
@@ -3212,9 +3214,9 @@
             ],
             "support": {
                 "issues": "https://github.com/networking/init-cms-bundle/issues",
-                "source": "https://github.com/networking/init-cms-bundle/tree/v5.4.6"
+                "source": "https://github.com/networking/init-cms-bundle/tree/v5.4.9.2"
             },
-            "time": "2022-09-28T13:30:36+00:00"
+            "time": "2022-10-13T16:07:39+00:00"
         },
         {
             "name": "nyholm/psr7",
@@ -14301,7 +14303,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2.5",
+        "php": ">=7.4",
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
