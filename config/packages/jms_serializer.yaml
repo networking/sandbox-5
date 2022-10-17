@@ -2,12 +2,23 @@ jms_serializer:
     visitors:
         xml_serialization:
             format_output: '%kernel.debug%'
-#    metadata:
-#        auto_detection: false
-#        directories:
-#            any-name:
-#                namespace_prefix: "My\\FooBundle"
-#                path: "@MyFooBundle/Resources/config/serializer"
-#            another-name:
-#                namespace_prefix: "My\\BarBundle"
-#                path: "@MyBarBundle/Resources/config/serializer"
+    #    object_constructors:
+    #        doctrine:
+    #            fallback_strategy: fallback
+
+    default_context:
+        serialization:
+            serialize_null: true
+    metadata:
+        infer_types_from_doc_block: true
+        infer_types_from_doctrine_metadata: false
+        directories:
+            NetworkingSonataMediaBundle:
+                namespace_prefix: "Sonata\\MediaBundle"
+                path: "@NetworkingInitCmsBundle/Resources/config/serializer"
+            NetworkingInitCmsBundle:
+                namespace_prefix: "Networking\\InitCmsBundle"
+                path: "@NetworkingInitCmsBundle/Resources/config/serializer"
+            app:
+                namespace_prefix: "App"
+                path: "%kernel.project_dir%/config/serializer"
